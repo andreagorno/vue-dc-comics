@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="container">
       <div class="section-logo">
           <img src="../assets/dc-logo.png" alt="">
       </div>
@@ -77,11 +77,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import "../style/variables";
+
     header {
         display: flex;
         align-items: center;
-        width: 80%;
-        margin: auto;
         // background-color: aquamarine;
     }
 
@@ -116,8 +116,8 @@ export default {
 
                     &.active,
                     &:hover {
-                        color: #0282F9;
-                        border-bottom: 5px solid #0282F9;
+                        color: $brandColor;
+                        border-bottom: 5px solid $brandColor;
                     }
                 }
             }

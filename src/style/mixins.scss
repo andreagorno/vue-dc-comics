@@ -1,0 +1,6 @@
+@mixin full-backgroundsize-cover {
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}

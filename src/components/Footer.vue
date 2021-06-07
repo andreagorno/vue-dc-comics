@@ -48,7 +48,7 @@
             
         </div>
         <div class="footer-bottom">
-            <div>
+            <div class="container">
                 <div class="sign-up">
                     <span>sign-up now!</span>
                 </div>
@@ -71,19 +71,19 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import "../style/variables";
+    @import "../style/mixins";
 
-    .container {
-        width: 80%;
-        margin: auto;
-    }
+    
     .footer-top {
         display: flex;
         flex-direction: row;
         // height: 300px;
         background-image: url('../assets/footer-bg.jpg');
-        background-size: cover;
+        @include full-backgroundsize-cover;
+        
 
-            .footer-links {
+        .footer-links {
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
@@ -122,7 +122,7 @@ export default {
                         width: 400px;
                     }
                 }
-            }
+        }
 
     }
 
@@ -131,8 +131,6 @@ export default {
 
         div {
             display: flex;
-            width: 80%;
-            margin: auto;
             padding: 15px 0;
 
             .sign-up {
@@ -140,7 +138,7 @@ export default {
 
                 span {
                     color: white;
-                    border: 2px solid #0282F9;
+                    border: 2px solid $brandColor;
                     margin-left: 5px;
                 }
             }
@@ -149,9 +147,10 @@ export default {
                 align-items: center;
                 padding: 5px;
                 text-transform: uppercase;
+                cursor: pointer;
 
                 &:nth-child(2) {
-                    color: #0282F9;
+                    color: $brandColor;
                     width: 150px;
                 }
             }
